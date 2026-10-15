@@ -1,0 +1,9 @@
+package pe.com.unfpg.service;
+
+import java.util.List;
+import pe.com.unfpg.entity.TipoDocumentoEntity;
+
+public interface TipoDocumentoService {
+    List<TipoDocumentoEntity> listar();
+    TipoDocumentoEntity buscarPorId(Integer codtipd);
+}
