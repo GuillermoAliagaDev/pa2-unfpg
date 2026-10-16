@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.CargoEntity;
 public interface CargoService {
     List<CargoEntity> listar();
     CargoEntity buscarPorId(Integer codcar);
+    CargoEntity actualizar(Integer codcar, CargoEntity datos);
 }

@@ -6,4 +6,6 @@ import pe.com.unfpg.entity.CalificacionEntity;
 public interface CalificacionService {
     List<CalificacionEntity> listar();
     CalificacionEntity buscarPorId(Integer codcal);
+    CalificacionEntity actualizar(Integer codcal, CalificacionEntity datos);
+    
 }

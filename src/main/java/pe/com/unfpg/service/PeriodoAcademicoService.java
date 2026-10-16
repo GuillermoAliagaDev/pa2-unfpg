@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.PeriodoAcademicoEntity;
 public interface PeriodoAcademicoService {
     List<PeriodoAcademicoEntity> listar();
     PeriodoAcademicoEntity buscarPorId(Integer codper);
+    PeriodoAcademicoEntity actualizar(Integer codper, PeriodoAcademicoEntity datos);
 }

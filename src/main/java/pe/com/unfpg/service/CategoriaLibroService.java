@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.CategoriaLibroEntity;
 public interface CategoriaLibroService {
     List<CategoriaLibroEntity> listar();
     CategoriaLibroEntity buscarPorId(Integer codcatl);
+    CategoriaLibroEntity actualizar(Integer codcatl, CategoriaLibroEntity datos);
 }

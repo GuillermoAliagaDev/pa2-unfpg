@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.EditorialEntity;
 public interface EditorialService {
     List<EditorialEntity> listar();
     EditorialEntity buscarPorId(Integer codedi);
+    EditorialEntity actualizar(Integer codedi, EditorialEntity datos);
 }

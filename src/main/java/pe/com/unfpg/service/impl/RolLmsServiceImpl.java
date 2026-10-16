@@ -2,8 +2,11 @@ package pe.com.unfpg.service.impl;
 
 import java.util.List;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
+
 import pe.com.unfpg.entity.RolLmsEntity;
 import pe.com.unfpg.repository.RolLmsRepository;
 import pe.com.unfpg.service.RolLmsService;
@@ -28,5 +31,24 @@ public class RolLmsServiceImpl implements RolLmsService {
         if (codroll == null || codroll <= 0) throw ConsultaGetException.idInvalido("codroll");
         return repository.findById(codroll)
             .orElseThrow(() -> ConsultaGetException.noEncontrado("rollms"));
+    }
+    
+    @Override
+    @Transactional
+    public RolLmsEntity actualizar(Integer codroll, RolLmsEntity datos) {
+        if (codroll == null || codroll <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Identificador invalido");
+        }
+        if (datos == null || datos.getNomroll() == null ||
+                datos.getNomroll().trim().isEmpty() ||
+                datos.getNomroll().trim().length() > 40 ||
+                datos.getEstroll() == null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Datos invalidos");
+        }
+        RolLmsEntity existente = repository.findById(codroll).orElseThrow(() ->
+            new ResponseStatusException(HttpStatus.NOT_FOUND, "Registro no encontrado"));
+        existente.setNomroll(datos.getNomroll().trim());
+        existente.setEstroll(datos.getEstroll());
+        return repository.save(existente);
     }
 }

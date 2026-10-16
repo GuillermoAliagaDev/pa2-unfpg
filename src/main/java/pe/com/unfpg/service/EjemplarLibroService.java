@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.EjemplarLibroEntity;
 public interface EjemplarLibroService {
     List<EjemplarLibroEntity> listar();
     EjemplarLibroEntity buscarPorId(Integer codeje);
+    EjemplarLibroEntity actualizar(Integer codeje, EjemplarLibroEntity datos);
 }

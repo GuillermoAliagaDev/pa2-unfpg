@@ -6,4 +6,9 @@ import pe.com.unfpg.entity.AreaEmpleoEntity;
 public interface AreaEmpleoService {
     List<AreaEmpleoEntity> listar();
     AreaEmpleoEntity buscarPorId(Integer codare);
+    
+    AreaEmpleoEntity actualizar(
+            Integer codare,
+            AreaEmpleoEntity datos
+        );
 }

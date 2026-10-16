@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.FacultadEntity;
 public interface FacultadService {
     List<FacultadEntity> listar();
     FacultadEntity buscarPorId(Integer codfac);
+    FacultadEntity actualizar(Integer codfac, FacultadEntity datos);
 }

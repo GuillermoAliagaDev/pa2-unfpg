@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.EstadoAulaEntity;
 public interface EstadoAulaService {
     List<EstadoAulaEntity> listar();
     EstadoAulaEntity buscarPorId(Integer codesta);
+    EstadoAulaEntity actualizar(Integer codesta, EstadoAulaEntity datos);
 }

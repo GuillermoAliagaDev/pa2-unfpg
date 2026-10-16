@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.UbicacionEntity;
 public interface UbicacionService {
     List<UbicacionEntity> listar();
     UbicacionEntity buscarPorId(Integer codubi);
+    UbicacionEntity actualizar(Integer codubi, UbicacionEntity datos);
 }
