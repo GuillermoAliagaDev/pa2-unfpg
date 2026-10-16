@@ -7,4 +7,6 @@ public interface CargoService {
     List<CargoEntity> listar();
     CargoEntity buscarPorId(Integer codcar);
     CargoEntity actualizar(Integer codcar, CargoEntity datos);
+    CargoEntity deshabilitar(Integer codcar);
+    CargoEntity habilitar(Integer codcar);
 }

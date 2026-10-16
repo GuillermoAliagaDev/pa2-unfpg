@@ -7,4 +7,6 @@ public interface DiaSemanaService {
     List<DiaSemanaEntity> listar();
     DiaSemanaEntity buscarPorId(Integer coddias);
     DiaSemanaEntity actualizar(Integer coddias, DiaSemanaEntity datos);
+    DiaSemanaEntity deshabilitar(Integer coddias);
+    DiaSemanaEntity habilitar(Integer coddias);
 }

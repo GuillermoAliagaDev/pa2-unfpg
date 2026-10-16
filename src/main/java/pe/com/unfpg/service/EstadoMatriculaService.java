@@ -7,4 +7,6 @@ public interface EstadoMatriculaService {
     List<EstadoMatriculaEntity> listar();
     EstadoMatriculaEntity buscarPorId(Integer codestm);
     EstadoMatriculaEntity actualizar(Integer codestm, EstadoMatriculaEntity datos);
+    EstadoMatriculaEntity deshabilitar(Integer codestm);
+    EstadoMatriculaEntity habilitar(Integer codestm);
 }

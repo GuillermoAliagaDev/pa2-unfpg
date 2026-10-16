@@ -70,4 +70,28 @@ public class OrdenPagoServiceImpl implements OrdenPagoService {
         actual.setCodestp(datos.getCodestp());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public OrdenPagoEntity deshabilitar(Integer codordpag) {
+        if (codordpag == null || codordpag <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        OrdenPagoEntity actual = repository.findById(codordpag)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "OrdenPago no encontrado"));
+        actual.setEstordpag(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public OrdenPagoEntity habilitar(Integer codordpag) {
+        if (codordpag == null || codordpag <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        OrdenPagoEntity actual = repository.findById(codordpag)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "OrdenPago no encontrado"));
+        actual.setEstordpag(true);
+        return repository.save(actual);
+    }
 }

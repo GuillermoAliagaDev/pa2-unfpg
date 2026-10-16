@@ -7,4 +7,6 @@ public interface PlanEstudioService {
     List<PlanEstudioEntity> listar();
     PlanEstudioEntity buscarPorId(Integer codpla);
     PlanEstudioEntity actualizar(Integer codpla, PlanEstudioEntity datos);
+    PlanEstudioEntity deshabilitar(Integer codpla);
+    PlanEstudioEntity habilitar(Integer codpla);
 }

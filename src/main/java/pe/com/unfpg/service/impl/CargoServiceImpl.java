@@ -49,4 +49,28 @@ public class CargoServiceImpl implements CargoService {
         return repository.save(existente);
     }
 
+
+    @Override
+    @Transactional
+    public CargoEntity deshabilitar(Integer codcar) {
+        if (codcar == null || codcar <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        CargoEntity actual = repository.findById(codcar)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cargo no encontrado"));
+        actual.setEstcar(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public CargoEntity habilitar(Integer codcar) {
+        if (codcar == null || codcar <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        CargoEntity actual = repository.findById(codcar)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Cargo no encontrado"));
+        actual.setEstcar(true);
+        return repository.save(actual);
+    }
 }

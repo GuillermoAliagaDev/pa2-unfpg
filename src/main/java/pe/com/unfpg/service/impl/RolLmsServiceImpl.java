@@ -51,4 +51,28 @@ public class RolLmsServiceImpl implements RolLmsService {
         existente.setEstroll(datos.getEstroll());
         return repository.save(existente);
     }
+
+    @Override
+    @Transactional
+    public RolLmsEntity deshabilitar(Integer codroll) {
+        if (codroll == null || codroll <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        RolLmsEntity actual = repository.findById(codroll)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "RolLms no encontrado"));
+        actual.setEstroll(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public RolLmsEntity habilitar(Integer codroll) {
+        if (codroll == null || codroll <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        RolLmsEntity actual = repository.findById(codroll)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "RolLms no encontrado"));
+        actual.setEstroll(true);
+        return repository.save(actual);
+    }
 }

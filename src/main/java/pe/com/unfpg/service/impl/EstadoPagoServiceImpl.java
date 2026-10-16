@@ -51,4 +51,28 @@ public class EstadoPagoServiceImpl implements EstadoPagoService {
         actual.setEstestp(datos.getEstestp());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public EstadoPagoEntity deshabilitar(Integer codestp) {
+        if (codestp == null || codestp <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EstadoPagoEntity actual = repository.findById(codestp)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EstadoPago no encontrado"));
+        actual.setEstestp(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public EstadoPagoEntity habilitar(Integer codestp) {
+        if (codestp == null || codestp <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EstadoPagoEntity actual = repository.findById(codestp)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EstadoPago no encontrado"));
+        actual.setEstestp(true);
+        return repository.save(actual);
+    }
 }

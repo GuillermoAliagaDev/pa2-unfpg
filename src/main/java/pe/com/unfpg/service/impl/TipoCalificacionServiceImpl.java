@@ -52,4 +52,28 @@ public class TipoCalificacionServiceImpl implements TipoCalificacionService {
             actual.setEsttipc(datos.getEsttipc());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public TipoCalificacionEntity deshabilitar(Integer codtipc) {
+        if (codtipc == null || codtipc <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        TipoCalificacionEntity actual = repository.findById(codtipc)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "TipoCalificacion no encontrado"));
+        actual.setEsttipc(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public TipoCalificacionEntity habilitar(Integer codtipc) {
+        if (codtipc == null || codtipc <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        TipoCalificacionEntity actual = repository.findById(codtipc)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "TipoCalificacion no encontrado"));
+        actual.setEsttipc(true);
+        return repository.save(actual);
+    }
 }

@@ -60,4 +60,28 @@ public class EvaluacionLmsServiceImpl implements EvaluacionLmsService {
         actual.setCodcurl(datos.getCodcurl());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public EvaluacionLmsEntity deshabilitar(Integer codeval) {
+        if (codeval == null || codeval <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EvaluacionLmsEntity actual = repository.findById(codeval)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EvaluacionLms no encontrado"));
+        actual.setEsteval(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public EvaluacionLmsEntity habilitar(Integer codeval) {
+        if (codeval == null || codeval <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EvaluacionLmsEntity actual = repository.findById(codeval)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EvaluacionLms no encontrado"));
+        actual.setEsteval(true);
+        return repository.save(actual);
+    }
 }

@@ -7,4 +7,6 @@ public interface CursoLmsService {
     List<CursoLmsEntity> listar();
     CursoLmsEntity buscarPorId(Integer codcurl);
     CursoLmsEntity actualizar(Integer codcurl, CursoLmsEntity datos);
+    CursoLmsEntity deshabilitar(Integer codcurl);
+    CursoLmsEntity habilitar(Integer codcurl);
 }

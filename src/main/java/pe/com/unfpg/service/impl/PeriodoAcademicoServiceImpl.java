@@ -50,4 +50,28 @@ public class PeriodoAcademicoServiceImpl implements PeriodoAcademicoService {
         actual.setEstper(datos.getEstper());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public PeriodoAcademicoEntity deshabilitar(Integer codper) {
+        if (codper == null || codper <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        PeriodoAcademicoEntity actual = repository.findById(codper)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "PeriodoAcademico no encontrado"));
+        actual.setEstper(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public PeriodoAcademicoEntity habilitar(Integer codper) {
+        if (codper == null || codper <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        PeriodoAcademicoEntity actual = repository.findById(codper)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "PeriodoAcademico no encontrado"));
+        actual.setEstper(true);
+        return repository.save(actual);
+    }
 }

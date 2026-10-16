@@ -50,4 +50,28 @@ public class FacultadServiceImpl implements FacultadService {
         actual.setEstfac(datos.getEstfac());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public FacultadEntity deshabilitar(Integer codfac) {
+        if (codfac == null || codfac <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        FacultadEntity actual = repository.findById(codfac)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Facultad no encontrado"));
+        actual.setEstfac(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public FacultadEntity habilitar(Integer codfac) {
+        if (codfac == null || codfac <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        FacultadEntity actual = repository.findById(codfac)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Facultad no encontrado"));
+        actual.setEstfac(true);
+        return repository.save(actual);
+    }
 }

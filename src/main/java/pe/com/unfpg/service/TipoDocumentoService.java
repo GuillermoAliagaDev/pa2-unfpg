@@ -7,4 +7,6 @@ public interface TipoDocumentoService {
     List<TipoDocumentoEntity> listar();
     TipoDocumentoEntity buscarPorId(Integer codtipd);
     TipoDocumentoEntity actualizar(Integer codtipd, TipoDocumentoEntity datos);
+    TipoDocumentoEntity deshabilitar(Integer codtipd);
+    TipoDocumentoEntity habilitar(Integer codtipd);
 }

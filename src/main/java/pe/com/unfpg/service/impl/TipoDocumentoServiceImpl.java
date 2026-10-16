@@ -52,4 +52,28 @@ public class TipoDocumentoServiceImpl implements TipoDocumentoService {
             actual.setEsttipd(datos.getEsttipd());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public TipoDocumentoEntity deshabilitar(Integer codtipd) {
+        if (codtipd == null || codtipd <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        TipoDocumentoEntity actual = repository.findById(codtipd)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "TipoDocumento no encontrado"));
+        actual.setEsttipd(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public TipoDocumentoEntity habilitar(Integer codtipd) {
+        if (codtipd == null || codtipd <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        TipoDocumentoEntity actual = repository.findById(codtipd)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "TipoDocumento no encontrado"));
+        actual.setEsttipd(true);
+        return repository.save(actual);
+    }
 }

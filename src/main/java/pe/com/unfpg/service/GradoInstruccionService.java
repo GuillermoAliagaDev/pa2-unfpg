@@ -7,4 +7,6 @@ public interface GradoInstruccionService {
     List<GradoInstruccionEntity> listar();
     GradoInstruccionEntity buscarPorId(Integer codgrai);
     GradoInstruccionEntity actualizar(Integer codgrai, GradoInstruccionEntity datos);
+    GradoInstruccionEntity deshabilitar(Integer codgrai);
+    GradoInstruccionEntity habilitar(Integer codgrai);
 }

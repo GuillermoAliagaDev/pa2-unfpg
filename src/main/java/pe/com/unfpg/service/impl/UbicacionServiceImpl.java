@@ -53,4 +53,28 @@ public class UbicacionServiceImpl implements UbicacionService {
             actual.setDesubi(datos.getDesubi());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public UbicacionEntity deshabilitar(Integer codubi) {
+        if (codubi == null || codubi <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        UbicacionEntity actual = repository.findById(codubi)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Ubicacion no encontrado"));
+        actual.setEstubi(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public UbicacionEntity habilitar(Integer codubi) {
+        if (codubi == null || codubi <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        UbicacionEntity actual = repository.findById(codubi)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Ubicacion no encontrado"));
+        actual.setEstubi(true);
+        return repository.save(actual);
+    }
 }

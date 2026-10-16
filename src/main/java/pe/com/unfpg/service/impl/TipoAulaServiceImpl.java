@@ -52,4 +52,28 @@ public class TipoAulaServiceImpl implements TipoAulaService {
             actual.setEsttipa(datos.getEsttipa());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public TipoAulaEntity deshabilitar(Integer codtipa) {
+        if (codtipa == null || codtipa <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        TipoAulaEntity actual = repository.findById(codtipa)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "TipoAula no encontrado"));
+        actual.setEsttipa(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public TipoAulaEntity habilitar(Integer codtipa) {
+        if (codtipa == null || codtipa <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        TipoAulaEntity actual = repository.findById(codtipa)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "TipoAula no encontrado"));
+        actual.setEsttipa(true);
+        return repository.save(actual);
+    }
 }

@@ -58,4 +58,28 @@ public class DetalleMatriculaServiceImpl implements DetalleMatriculaService {
         actual.setCodsec(datos.getCodsec());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public DetalleMatriculaEntity deshabilitar(Integer coddet) {
+        if (coddet == null || coddet <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        DetalleMatriculaEntity actual = repository.findById(coddet)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "DetalleMatricula no encontrado"));
+        actual.setEstdet(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public DetalleMatriculaEntity habilitar(Integer coddet) {
+        if (coddet == null || coddet <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        DetalleMatriculaEntity actual = repository.findById(coddet)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "DetalleMatricula no encontrado"));
+        actual.setEstdet(true);
+        return repository.save(actual);
+    }
 }

@@ -7,4 +7,6 @@ public interface EmpleadoService {
     List<EmpleadoEntity> listar();
     EmpleadoEntity buscarPorId(Integer codemp);
     EmpleadoEntity actualizar(Integer codemp, EmpleadoEntity datos);
+    EmpleadoEntity deshabilitar(Integer codemp);
+    EmpleadoEntity habilitar(Integer codemp);
 }

@@ -55,4 +55,28 @@ public class PagoServiceImpl implements PagoService {
         actual.setCodordpag(datos.getCodordpag());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public PagoEntity deshabilitar(Integer codpag) {
+        if (codpag == null || codpag <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        PagoEntity actual = repository.findById(codpag)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pago no encontrado"));
+        actual.setEstpag(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public PagoEntity habilitar(Integer codpag) {
+        if (codpag == null || codpag <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        PagoEntity actual = repository.findById(codpag)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Pago no encontrado"));
+        actual.setEstpag(true);
+        return repository.save(actual);
+    }
 }

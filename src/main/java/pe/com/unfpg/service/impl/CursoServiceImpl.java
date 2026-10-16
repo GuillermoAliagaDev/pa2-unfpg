@@ -62,4 +62,15 @@ public class CursoServiceImpl implements CursoService {
         actual.setCodprog(datos.getCodprog());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public void eliminar(Integer codcur) {
+        if (codcur == null || codcur <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        CursoEntity actual = repository.findById(codcur)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Curso no encontrado"));
+        repository.delete(actual);
+    }
 }

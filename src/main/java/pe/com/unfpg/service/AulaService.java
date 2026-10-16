@@ -7,4 +7,5 @@ public interface AulaService {
     List<AulaEntity> listar();
     AulaEntity buscarPorId(Integer codaul);
     AulaEntity actualizar(Integer codaul, AulaEntity datos);
+    void eliminar(Integer codaul);
 }

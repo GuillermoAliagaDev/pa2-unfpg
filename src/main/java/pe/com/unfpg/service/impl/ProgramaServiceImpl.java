@@ -57,4 +57,28 @@ public class ProgramaServiceImpl implements ProgramaService {
         actual.setCodfac(datos.getCodfac());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public ProgramaEntity deshabilitar(Integer codprog) {
+        if (codprog == null || codprog <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        ProgramaEntity actual = repository.findById(codprog)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Programa no encontrado"));
+        actual.setEstprog(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public ProgramaEntity habilitar(Integer codprog) {
+        if (codprog == null || codprog <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        ProgramaEntity actual = repository.findById(codprog)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Programa no encontrado"));
+        actual.setEstprog(true);
+        return repository.save(actual);
+    }
 }

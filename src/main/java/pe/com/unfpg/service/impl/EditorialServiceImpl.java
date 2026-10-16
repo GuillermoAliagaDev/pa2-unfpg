@@ -47,4 +47,28 @@ public class EditorialServiceImpl implements EditorialService {
         actual.setEstedi(datos.getEstedi());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public EditorialEntity deshabilitar(Integer codedi) {
+        if (codedi == null || codedi <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EditorialEntity actual = repository.findById(codedi)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Editorial no encontrado"));
+        actual.setEstedi(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public EditorialEntity habilitar(Integer codedi) {
+        if (codedi == null || codedi <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EditorialEntity actual = repository.findById(codedi)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Editorial no encontrado"));
+        actual.setEstedi(true);
+        return repository.save(actual);
+    }
 }

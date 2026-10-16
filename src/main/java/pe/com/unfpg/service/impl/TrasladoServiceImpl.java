@@ -57,4 +57,28 @@ public class TrasladoServiceImpl implements TrasladoService {
         actual.setNummat(datos.getNummat());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public TrasladoEntity deshabilitar(Integer codtra) {
+        if (codtra == null || codtra <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        TrasladoEntity actual = repository.findById(codtra)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Traslado no encontrado"));
+        actual.setEsttras(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public TrasladoEntity habilitar(Integer codtra) {
+        if (codtra == null || codtra <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        TrasladoEntity actual = repository.findById(codtra)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Traslado no encontrado"));
+        actual.setEsttras(true);
+        return repository.save(actual);
+    }
 }

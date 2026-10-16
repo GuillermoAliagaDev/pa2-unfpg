@@ -7,4 +7,6 @@ public interface UbicacionService {
     List<UbicacionEntity> listar();
     UbicacionEntity buscarPorId(Integer codubi);
     UbicacionEntity actualizar(Integer codubi, UbicacionEntity datos);
+    UbicacionEntity deshabilitar(Integer codubi);
+    UbicacionEntity habilitar(Integer codubi);
 }

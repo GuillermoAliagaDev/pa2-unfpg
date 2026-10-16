@@ -11,4 +11,6 @@ public interface AreaEmpleoService {
             Integer codare,
             AreaEmpleoEntity datos
         );
+    AreaEmpleoEntity deshabilitar(Integer codare);
+    AreaEmpleoEntity habilitar(Integer codare);
 }

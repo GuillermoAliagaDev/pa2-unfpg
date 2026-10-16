@@ -58,4 +58,28 @@ public class CursoLmsServiceImpl implements CursoLmsService {
         actual.setCodsec(datos.getCodsec());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public CursoLmsEntity deshabilitar(Integer codcurl) {
+        if (codcurl == null || codcurl <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        CursoLmsEntity actual = repository.findById(codcurl)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "CursoLms no encontrado"));
+        actual.setEstcurl(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public CursoLmsEntity habilitar(Integer codcurl) {
+        if (codcurl == null || codcurl <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        CursoLmsEntity actual = repository.findById(codcurl)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "CursoLms no encontrado"));
+        actual.setEstcurl(true);
+        return repository.save(actual);
+    }
 }

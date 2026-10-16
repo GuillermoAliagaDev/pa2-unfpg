@@ -61,4 +61,28 @@ public class EjemplarLibroServiceImpl implements EjemplarLibroService {
         actual.setEsteje(datos.getEsteje());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public EjemplarLibroEntity deshabilitar(Integer codeje) {
+        if (codeje == null || codeje <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EjemplarLibroEntity actual = repository.findById(codeje)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EjemplarLibro no encontrado"));
+        actual.setEsteje(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public EjemplarLibroEntity habilitar(Integer codeje) {
+        if (codeje == null || codeje <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EjemplarLibroEntity actual = repository.findById(codeje)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EjemplarLibro no encontrado"));
+        actual.setEsteje(true);
+        return repository.save(actual);
+    }
 }

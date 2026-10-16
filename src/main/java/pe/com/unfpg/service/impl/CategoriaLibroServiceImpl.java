@@ -46,4 +46,28 @@ public class CategoriaLibroServiceImpl implements CategoriaLibroService {
         existente.setEstcatl(datos.getEstcatl());
         return repository.save(existente);
     }
+
+    @Override
+    @Transactional
+    public CategoriaLibroEntity deshabilitar(Integer codcatl) {
+        if (codcatl == null || codcatl <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        CategoriaLibroEntity actual = repository.findById(codcatl)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "CategoriaLibro no encontrado"));
+        actual.setEstcatl(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public CategoriaLibroEntity habilitar(Integer codcatl) {
+        if (codcatl == null || codcatl <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        CategoriaLibroEntity actual = repository.findById(codcatl)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "CategoriaLibro no encontrado"));
+        actual.setEstcatl(true);
+        return repository.save(actual);
+    }
 }

@@ -46,4 +46,28 @@ public class DistritoServiceImpl implements DistritoService {
         existente.setEstdis(datos.getEstdis());
         return repository.save(existente);
     }
+
+    @Override
+    @Transactional
+    public DistritoEntity deshabilitar(Integer coddis) {
+        if (coddis == null || coddis <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        DistritoEntity actual = repository.findById(coddis)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Distrito no encontrado"));
+        actual.setEstdis(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public DistritoEntity habilitar(Integer coddis) {
+        if (coddis == null || coddis <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        DistritoEntity actual = repository.findById(coddis)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Distrito no encontrado"));
+        actual.setEstdis(true);
+        return repository.save(actual);
+    }
 }

@@ -104,4 +104,28 @@ public class DocenteServiceImpl implements DocenteService {
         actual.setCodestc(datos.getCodestc());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public DocenteEntity deshabilitar(Integer coddoc) {
+        if (coddoc == null || coddoc <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        DocenteEntity actual = repository.findById(coddoc)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Docente no encontrado"));
+        actual.setEstdoc(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public DocenteEntity habilitar(Integer coddoc) {
+        if (coddoc == null || coddoc <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        DocenteEntity actual = repository.findById(coddoc)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Docente no encontrado"));
+        actual.setEstdoc(true);
+        return repository.save(actual);
+    }
 }

@@ -7,4 +7,6 @@ public interface MetodoPagoService {
     List<MetodoPagoEntity> listar();
     MetodoPagoEntity buscarPorId(Integer codmetp);
     MetodoPagoEntity actualizar(Integer codmetp, MetodoPagoEntity datos);
+    MetodoPagoEntity deshabilitar(Integer codmetp);
+    MetodoPagoEntity habilitar(Integer codmetp);
 }

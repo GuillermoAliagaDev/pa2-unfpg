@@ -7,4 +7,6 @@ public interface LibroService {
     List<LibroEntity> listar();
     LibroEntity buscarPorId(Integer codlib);
     LibroEntity actualizar(Integer codlib, LibroEntity datos);
+    LibroEntity deshabilitar(Integer codlib);
+    LibroEntity habilitar(Integer codlib);
 }

@@ -76,4 +76,28 @@ public class AreaEmpleoServiceImpl implements AreaEmpleoService {
 
         return repository.save(area);
     }
+
+    @Override
+    @Transactional
+    public AreaEmpleoEntity deshabilitar(Integer codare) {
+        if (codare == null || codare <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        AreaEmpleoEntity actual = repository.findById(codare)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "AreaEmpleo no encontrado"));
+        actual.setEstare(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public AreaEmpleoEntity habilitar(Integer codare) {
+        if (codare == null || codare <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        AreaEmpleoEntity actual = repository.findById(codare)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "AreaEmpleo no encontrado"));
+        actual.setEstare(true);
+        return repository.save(actual);
+    }
 }

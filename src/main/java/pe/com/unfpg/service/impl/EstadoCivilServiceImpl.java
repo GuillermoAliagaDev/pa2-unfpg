@@ -51,4 +51,28 @@ public class EstadoCivilServiceImpl implements EstadoCivilService {
         actual.setEstestc(datos.getEstestc());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public EstadoCivilEntity deshabilitar(Integer codestc) {
+        if (codestc == null || codestc <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EstadoCivilEntity actual = repository.findById(codestc)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EstadoCivil no encontrado"));
+        actual.setEstestc(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public EstadoCivilEntity habilitar(Integer codestc) {
+        if (codestc == null || codestc <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EstadoCivilEntity actual = repository.findById(codestc)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EstadoCivil no encontrado"));
+        actual.setEstestc(true);
+        return repository.save(actual);
+    }
 }

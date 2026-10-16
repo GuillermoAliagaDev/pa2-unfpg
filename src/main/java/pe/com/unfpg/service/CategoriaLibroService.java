@@ -7,4 +7,6 @@ public interface CategoriaLibroService {
     List<CategoriaLibroEntity> listar();
     CategoriaLibroEntity buscarPorId(Integer codcatl);
     CategoriaLibroEntity actualizar(Integer codcatl, CategoriaLibroEntity datos);
+    CategoriaLibroEntity deshabilitar(Integer codcatl);
+    CategoriaLibroEntity habilitar(Integer codcatl);
 }

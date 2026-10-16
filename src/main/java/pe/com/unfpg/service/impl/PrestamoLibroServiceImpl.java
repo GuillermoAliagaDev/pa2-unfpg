@@ -66,4 +66,28 @@ public class PrestamoLibroServiceImpl implements PrestamoLibroService {
         actual.setCodestl(datos.getCodestl());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public PrestamoLibroEntity deshabilitar(Integer numpre) {
+        if (numpre == null || numpre <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        PrestamoLibroEntity actual = repository.findById(numpre)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "PrestamoLibro no encontrado"));
+        actual.setEstpre(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public PrestamoLibroEntity habilitar(Integer numpre) {
+        if (numpre == null || numpre <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        PrestamoLibroEntity actual = repository.findById(numpre)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "PrestamoLibro no encontrado"));
+        actual.setEstpre(true);
+        return repository.save(actual);
+    }
 }

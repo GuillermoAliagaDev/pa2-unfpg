@@ -7,4 +7,6 @@ public interface ProgramaService {
     List<ProgramaEntity> listar();
     ProgramaEntity buscarPorId(Integer codprog);
     ProgramaEntity actualizar(Integer codprog, ProgramaEntity datos);
+    ProgramaEntity deshabilitar(Integer codprog);
+    ProgramaEntity habilitar(Integer codprog);
 }

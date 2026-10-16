@@ -7,4 +7,5 @@ public interface AsistenciaService {
     List<AsistenciaEntity> listar();
     AsistenciaEntity buscarPorId(Integer codasis);
     AsistenciaEntity actualizar(Integer codasis, AsistenciaEntity datos);
+    void eliminar(Integer codasis);
 }

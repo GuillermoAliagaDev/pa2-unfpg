@@ -7,4 +7,6 @@ public interface OrdenPagoService {
     List<OrdenPagoEntity> listar();
     OrdenPagoEntity buscarPorId(Integer codordpag);
     OrdenPagoEntity actualizar(Integer codordpag, OrdenPagoEntity datos);
+    OrdenPagoEntity deshabilitar(Integer codordpag);
+    OrdenPagoEntity habilitar(Integer codordpag);
 }
