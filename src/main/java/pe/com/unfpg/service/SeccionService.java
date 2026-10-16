@@ -8,4 +8,5 @@ public interface SeccionService {
     SeccionEntity buscarPorId(Integer codsec);
     SeccionEntity actualizar(Integer codsec, SeccionEntity datos);
 
+    void eliminar(Integer codsec);
 }

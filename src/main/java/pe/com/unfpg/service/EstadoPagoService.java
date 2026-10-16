@@ -7,4 +7,6 @@ public interface EstadoPagoService {
     List<EstadoPagoEntity> listar();
     EstadoPagoEntity buscarPorId(Integer codestp);
     EstadoPagoEntity actualizar(Integer codestp, EstadoPagoEntity datos);
+    EstadoPagoEntity deshabilitar(Integer codestp);
+    EstadoPagoEntity habilitar(Integer codestp);
 }

@@ -58,4 +58,28 @@ public class PlanEstudioServiceImpl implements PlanEstudioService {
         actual.setCodprog(datos.getCodprog());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public PlanEstudioEntity deshabilitar(Integer codpla) {
+        if (codpla == null || codpla <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        PlanEstudioEntity actual = repository.findById(codpla)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "PlanEstudio no encontrado"));
+        actual.setEstpla(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public PlanEstudioEntity habilitar(Integer codpla) {
+        if (codpla == null || codpla <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        PlanEstudioEntity actual = repository.findById(codpla)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "PlanEstudio no encontrado"));
+        actual.setEstpla(true);
+        return repository.save(actual);
+    }
 }

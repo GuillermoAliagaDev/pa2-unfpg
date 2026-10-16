@@ -51,4 +51,28 @@ public class EstadoPrestamoLibroServiceImpl implements EstadoPrestamoLibroServic
         actual.setEstestl(datos.getEstestl());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public EstadoPrestamoLibroEntity deshabilitar(Integer codestl) {
+        if (codestl == null || codestl <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EstadoPrestamoLibroEntity actual = repository.findById(codestl)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EstadoPrestamoLibro no encontrado"));
+        actual.setEstestl(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public EstadoPrestamoLibroEntity habilitar(Integer codestl) {
+        if (codestl == null || codestl <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EstadoPrestamoLibroEntity actual = repository.findById(codestl)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EstadoPrestamoLibro no encontrado"));
+        actual.setEstestl(true);
+        return repository.save(actual);
+    }
 }

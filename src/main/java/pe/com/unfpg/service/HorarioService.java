@@ -7,4 +7,5 @@ public interface HorarioService {
     List<HorarioEntity> listar();
     HorarioEntity buscarPorId(Integer codhor);
     HorarioEntity actualizar(Integer codhor, HorarioEntity datos);
+    void eliminar(Integer codhor);
 }

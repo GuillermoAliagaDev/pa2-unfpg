@@ -1,0 +1,6736 @@
+{
+  "info": {
+    "name": "UNFPG Parte 5 - DELETE (Deshabilitar) y PATCH (Habilitar)",
+    "description": "Coleccion de pruebas obligatorias de DELETE y PATCH para la evaluacion PA2 (Integracion de Aplicaciones)",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:8080",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "alumno",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/alumno/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "alumno",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/alumno/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "alumno",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/alumno/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "alumno",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/alumno/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "alumno",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/alumno/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "alumno",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/alumno/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "alumno",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/alumno/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "alumno",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/alumno/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "alumno",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "areaempleo",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/areaempleo/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "areaempleo",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/areaempleo/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "areaempleo",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/areaempleo/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "areaempleo",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/areaempleo/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "areaempleo",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/areaempleo/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "areaempleo",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/areaempleo/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "areaempleo",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/areaempleo/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "areaempleo",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/areaempleo/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "areaempleo",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "asistencia",
+      "item": [
+        {
+          "name": "DELETE - Eliminar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/asistencia/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asistencia",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/asistencia/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asistencia",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/asistencia/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asistencia",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/asistencia/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "asistencia",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "aula",
+      "item": [
+        {
+          "name": "DELETE - Eliminar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/aula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "aula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/aula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "aula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/aula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "aula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/aula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "aula",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "bloque",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bloque/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "bloque",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bloque/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "bloque",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bloque/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "bloque",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bloque/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "bloque",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bloque/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "bloque",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bloque/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "bloque",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bloque/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "bloque",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/bloque/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "bloque",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "calificacion",
+      "item": [
+        {
+          "name": "DELETE - Eliminar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/calificacion/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "calificacion",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/calificacion/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "calificacion",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/calificacion/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "calificacion",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/calificacion/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "calificacion",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "cargo",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cargo/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cargo",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cargo/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cargo",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cargo/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cargo",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cargo/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cargo",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cargo/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cargo",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cargo/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cargo",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cargo/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cargo",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cargo/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cargo",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "categorialibro",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categorialibro/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categorialibro",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categorialibro/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categorialibro",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categorialibro/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categorialibro",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categorialibro/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categorialibro",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categorialibro/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categorialibro",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categorialibro/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categorialibro",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categorialibro/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categorialibro",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/categorialibro/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "categorialibro",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "conceptopago",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/conceptopago/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "conceptopago",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/conceptopago/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "conceptopago",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/conceptopago/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "conceptopago",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/conceptopago/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "conceptopago",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/conceptopago/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "conceptopago",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/conceptopago/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "conceptopago",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/conceptopago/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "conceptopago",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/conceptopago/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "conceptopago",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "cursolms",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cursolms/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cursolms",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cursolms/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cursolms",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cursolms/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cursolms",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cursolms/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cursolms",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cursolms/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cursolms",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cursolms/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cursolms",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cursolms/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cursolms",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/cursolms/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "cursolms",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "curso",
+      "item": [
+        {
+          "name": "DELETE - Eliminar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/curso/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "curso",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/curso/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "curso",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/curso/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "curso",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/curso/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "curso",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "detallematricula",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/detallematricula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "detallematricula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/detallematricula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "detallematricula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/detallematricula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "detallematricula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/detallematricula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "detallematricula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/detallematricula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "detallematricula",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/detallematricula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "detallematricula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/detallematricula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "detallematricula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/detallematricula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "detallematricula",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "diasemana",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/diasemana/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "diasemana",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/diasemana/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "diasemana",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/diasemana/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "diasemana",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/diasemana/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "diasemana",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/diasemana/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "diasemana",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/diasemana/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "diasemana",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/diasemana/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "diasemana",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/diasemana/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "diasemana",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "distrito",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/distrito/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "distrito",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/distrito/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "distrito",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/distrito/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "distrito",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/distrito/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "distrito",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/distrito/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "distrito",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/distrito/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "distrito",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/distrito/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "distrito",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/distrito/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "distrito",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "docente",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/docente/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "docente",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/docente/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "docente",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/docente/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "docente",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/docente/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "docente",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/docente/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "docente",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/docente/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "docente",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/docente/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "docente",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/docente/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "docente",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "editorial",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/editorial/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "editorial",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/editorial/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "editorial",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/editorial/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "editorial",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/editorial/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "editorial",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/editorial/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "editorial",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/editorial/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "editorial",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/editorial/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "editorial",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/editorial/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "editorial",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ejemplarlibro",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ejemplarlibro/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ejemplarlibro",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ejemplarlibro/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ejemplarlibro",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ejemplarlibro/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ejemplarlibro",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ejemplarlibro/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ejemplarlibro",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ejemplarlibro/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ejemplarlibro",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ejemplarlibro/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ejemplarlibro",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ejemplarlibro/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ejemplarlibro",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ejemplarlibro/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ejemplarlibro",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "empleado",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/empleado/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "empleado",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/empleado/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "empleado",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/empleado/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "empleado",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/empleado/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "empleado",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/empleado/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "empleado",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/empleado/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "empleado",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/empleado/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "empleado",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/empleado/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "empleado",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "estadoaula",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoaula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoaula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoaula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoaula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoaula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoaula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoaula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoaula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoaula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoaula",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoaula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoaula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoaula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoaula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoaula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoaula",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "estadocivil",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadocivil/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadocivil",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadocivil/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadocivil",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadocivil/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadocivil",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadocivil/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadocivil",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadocivil/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadocivil",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadocivil/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadocivil",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadocivil/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadocivil",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadocivil/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadocivil",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "estadomatricula",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadomatricula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadomatricula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadomatricula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadomatricula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadomatricula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadomatricula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadomatricula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadomatricula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadomatricula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadomatricula",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadomatricula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadomatricula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadomatricula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadomatricula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadomatricula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadomatricula",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "estadopago",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadopago/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadopago",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadopago/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadopago",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadopago/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadopago",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadopago/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadopago",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadopago/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadopago",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadopago/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadopago",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadopago/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadopago",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadopago/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadopago",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "estadoprestamolibro",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoprestamolibro/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoprestamolibro",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoprestamolibro/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoprestamolibro",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoprestamolibro/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoprestamolibro",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoprestamolibro/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoprestamolibro",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoprestamolibro/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoprestamolibro",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoprestamolibro/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoprestamolibro",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoprestamolibro/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoprestamolibro",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/estadoprestamolibro/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "estadoprestamolibro",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "evaluacionlms",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/evaluacionlms/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "evaluacionlms",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/evaluacionlms/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "evaluacionlms",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/evaluacionlms/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "evaluacionlms",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/evaluacionlms/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "evaluacionlms",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/evaluacionlms/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "evaluacionlms",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/evaluacionlms/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "evaluacionlms",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/evaluacionlms/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "evaluacionlms",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/evaluacionlms/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "evaluacionlms",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "facultad",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/facultad/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "facultad",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/facultad/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "facultad",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/facultad/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "facultad",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/facultad/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "facultad",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/facultad/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "facultad",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/facultad/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "facultad",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/facultad/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "facultad",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/facultad/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "facultad",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "gradoinstruccion",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/gradoinstruccion/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "gradoinstruccion",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/gradoinstruccion/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "gradoinstruccion",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/gradoinstruccion/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "gradoinstruccion",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/gradoinstruccion/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "gradoinstruccion",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/gradoinstruccion/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "gradoinstruccion",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/gradoinstruccion/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "gradoinstruccion",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/gradoinstruccion/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "gradoinstruccion",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/gradoinstruccion/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "gradoinstruccion",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "horario",
+      "item": [
+        {
+          "name": "DELETE - Eliminar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/horario/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "horario",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/horario/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "horario",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/horario/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "horario",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/horario/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "horario",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "libro",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/libro/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "libro",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/libro/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "libro",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/libro/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "libro",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/libro/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "libro",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/libro/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "libro",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/libro/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "libro",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/libro/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "libro",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/libro/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "libro",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "matriculalms",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matriculalms/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matriculalms",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matriculalms/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matriculalms",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matriculalms/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matriculalms",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matriculalms/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matriculalms",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matriculalms/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matriculalms",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matriculalms/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matriculalms",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matriculalms/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matriculalms",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matriculalms/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matriculalms",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "matricula",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matricula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matricula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matricula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matricula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matricula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matricula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matricula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matricula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matricula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matricula",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matricula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matricula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matricula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matricula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/matricula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "matricula",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "metodopago",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/metodopago/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "metodopago",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/metodopago/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "metodopago",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/metodopago/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "metodopago",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/metodopago/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "metodopago",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/metodopago/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "metodopago",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/metodopago/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "metodopago",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/metodopago/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "metodopago",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/metodopago/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "metodopago",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ordenpago",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ordenpago/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ordenpago",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ordenpago/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ordenpago",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ordenpago/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ordenpago",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ordenpago/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ordenpago",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ordenpago/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ordenpago",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ordenpago/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ordenpago",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ordenpago/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ordenpago",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ordenpago/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ordenpago",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "pago",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/pago/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "pago",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/pago/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "pago",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/pago/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "pago",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/pago/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "pago",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/pago/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "pago",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/pago/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "pago",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/pago/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "pago",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/pago/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "pago",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "periodoacademico",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/periodoacademico/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "periodoacademico",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/periodoacademico/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "periodoacademico",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/periodoacademico/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "periodoacademico",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/periodoacademico/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "periodoacademico",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/periodoacademico/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "periodoacademico",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/periodoacademico/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "periodoacademico",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/periodoacademico/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "periodoacademico",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/periodoacademico/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "periodoacademico",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "planestudio",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/planestudio/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "planestudio",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/planestudio/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "planestudio",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/planestudio/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "planestudio",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/planestudio/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "planestudio",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/planestudio/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "planestudio",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/planestudio/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "planestudio",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/planestudio/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "planestudio",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/planestudio/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "planestudio",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "prestamolibro",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/prestamolibro/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "prestamolibro",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/prestamolibro/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "prestamolibro",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/prestamolibro/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "prestamolibro",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/prestamolibro/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "prestamolibro",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/prestamolibro/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "prestamolibro",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/prestamolibro/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "prestamolibro",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/prestamolibro/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "prestamolibro",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/prestamolibro/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "prestamolibro",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "programa",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/programa/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "programa",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/programa/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "programa",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/programa/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "programa",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/programa/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "programa",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/programa/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "programa",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/programa/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "programa",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/programa/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "programa",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/programa/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "programa",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "rollms",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rollms/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rollms",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rollms/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rollms",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rollms/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rollms",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rollms/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rollms",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rollms/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rollms",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rollms/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rollms",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rollms/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rollms",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rollms/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rollms",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "rol",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rol/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rol",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rol/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rol",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rol/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rol",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rol/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rol",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rol/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rol",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rol/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rol",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rol/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rol",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/rol/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "rol",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "seccion",
+      "item": [
+        {
+          "name": "DELETE - Eliminar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/seccion/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "seccion",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/seccion/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "seccion",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/seccion/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "seccion",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/seccion/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "seccion",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "sexo",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sexo/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sexo",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sexo/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sexo",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sexo/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sexo",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sexo/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sexo",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sexo/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sexo",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sexo/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sexo",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sexo/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sexo",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/sexo/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "sexo",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "tipoaula",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipoaula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipoaula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipoaula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipoaula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipoaula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipoaula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipoaula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipoaula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipoaula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipoaula",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipoaula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipoaula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipoaula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipoaula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipoaula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipoaula",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "tipocalificacion",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipocalificacion/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipocalificacion",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipocalificacion/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipocalificacion",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipocalificacion/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipocalificacion",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipocalificacion/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipocalificacion",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipocalificacion/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipocalificacion",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipocalificacion/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipocalificacion",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipocalificacion/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipocalificacion",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipocalificacion/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipocalificacion",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "tipodocumento",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipodocumento/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipodocumento",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipodocumento/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipodocumento",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipodocumento/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipodocumento",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipodocumento/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipodocumento",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipodocumento/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipodocumento",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipodocumento/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipodocumento",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipodocumento/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipodocumento",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipodocumento/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipodocumento",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "tipomatricula",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipomatricula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipomatricula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipomatricula/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipomatricula",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipomatricula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipomatricula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipomatricula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipomatricula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipomatricula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipomatricula",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipomatricula/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipomatricula",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipomatricula/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipomatricula",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/tipomatricula/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "tipomatricula",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "traslado",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/traslado/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "traslado",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/traslado/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "traslado",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/traslado/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "traslado",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/traslado/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "traslado",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/traslado/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "traslado",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/traslado/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "traslado",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/traslado/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "traslado",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/traslado/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "traslado",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "ubicacion",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ubicacion/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ubicacion",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ubicacion/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ubicacion",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ubicacion/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ubicacion",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ubicacion/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ubicacion",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ubicacion/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ubicacion",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ubicacion/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ubicacion",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ubicacion/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ubicacion",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/ubicacion/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "ubicacion",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    },
+    {
+      "name": "usuario",
+      "item": [
+        {
+          "name": "DELETE - Deshabilitar (ID 1)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/usuario/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usuario",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - Habilitar (ID 1)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/usuario/1",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usuario",
+                "1"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Inexistente (404)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/usuario/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usuario",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Cero (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/usuario/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usuario",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "DELETE - ID Texto (400)",
+          "request": {
+            "method": "DELETE",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/usuario/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usuario",
+                "abc"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Inexistente (404)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/usuario/2147483647",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usuario",
+                "2147483647"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Cero (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/usuario/0",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usuario",
+                "0"
+              ]
+            }
+          }
+        },
+        {
+          "name": "PATCH - ID Texto (400)",
+          "request": {
+            "method": "PATCH",
+            "header": [],
+            "url": {
+              "raw": "{{baseUrl}}/api/usuario/abc",
+              "host": [
+                "{{baseUrl}}"
+              ],
+              "path": [
+                "api",
+                "usuario",
+                "abc"
+              ]
+            }
+          }
+        }
+      ]
+    }
+  ]
+}

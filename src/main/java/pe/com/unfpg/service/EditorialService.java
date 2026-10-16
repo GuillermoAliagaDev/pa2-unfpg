@@ -7,4 +7,6 @@ public interface EditorialService {
     List<EditorialEntity> listar();
     EditorialEntity buscarPorId(Integer codedi);
     EditorialEntity actualizar(Integer codedi, EditorialEntity datos);
+    EditorialEntity deshabilitar(Integer codedi);
+    EditorialEntity habilitar(Integer codedi);
 }

@@ -7,4 +7,6 @@ public interface TipoAulaService {
     List<TipoAulaEntity> listar();
     TipoAulaEntity buscarPorId(Integer codtipa);
     TipoAulaEntity actualizar(Integer codtipa, TipoAulaEntity datos);
+    TipoAulaEntity deshabilitar(Integer codtipa);
+    TipoAulaEntity habilitar(Integer codtipa);
 }

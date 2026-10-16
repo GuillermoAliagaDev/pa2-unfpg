@@ -7,4 +7,6 @@ public interface TipoMatriculaService {
     List<TipoMatriculaEntity> listar();
     TipoMatriculaEntity buscarPorId(Integer codtipm);
     TipoMatriculaEntity actualizar(Integer codtipm, TipoMatriculaEntity datos);
+    TipoMatriculaEntity deshabilitar(Integer codtipm);
+    TipoMatriculaEntity habilitar(Integer codtipm);
 }

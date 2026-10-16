@@ -65,4 +65,15 @@ public class CalificacionServiceImpl implements CalificacionService {
         actual.setCodtipc(datos.getCodtipc());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public void eliminar(Integer codcal) {
+        if (codcal == null || codcal <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        CalificacionEntity actual = repository.findById(codcal)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Calificacion no encontrado"));
+        repository.delete(actual);
+    }
 }

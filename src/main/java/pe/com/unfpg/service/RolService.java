@@ -7,4 +7,6 @@ public interface RolService {
     List<RolEntity> listar();
     RolEntity buscarPorId(Integer codrol);
     RolEntity actualizar(Integer codrol, RolEntity datos);
+    RolEntity deshabilitar(Integer codrol);
+    RolEntity habilitar(Integer codrol);
 }

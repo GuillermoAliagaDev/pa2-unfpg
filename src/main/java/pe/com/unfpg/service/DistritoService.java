@@ -8,4 +8,6 @@ public interface DistritoService {
     DistritoEntity buscarPorId(Integer coddis);
     DistritoEntity actualizar(Integer coddis, DistritoEntity datos);
     
+    DistritoEntity deshabilitar(Integer coddis);
+    DistritoEntity habilitar(Integer coddis);
 }

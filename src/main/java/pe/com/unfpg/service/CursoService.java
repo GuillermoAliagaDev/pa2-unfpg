@@ -8,4 +8,5 @@ public interface CursoService {
     CursoEntity buscarPorId(Integer codcur);
     CursoEntity actualizar(Integer codcur, CursoEntity datos);
 
+    void eliminar(Integer codcur);
 }

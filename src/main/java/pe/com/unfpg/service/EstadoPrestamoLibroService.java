@@ -7,4 +7,6 @@ public interface EstadoPrestamoLibroService {
     List<EstadoPrestamoLibroEntity> listar();
     EstadoPrestamoLibroEntity buscarPorId(Integer codestl);
     EstadoPrestamoLibroEntity actualizar(Integer codestl, EstadoPrestamoLibroEntity datos);
+    EstadoPrestamoLibroEntity deshabilitar(Integer codestl);
+    EstadoPrestamoLibroEntity habilitar(Integer codestl);
 }

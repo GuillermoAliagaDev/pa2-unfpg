@@ -69,4 +69,28 @@ public class MatriculaServiceImpl implements MatriculaService {
         actual.setEstmat(datos.getEstmat());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public MatriculaEntity deshabilitar(Integer nummat) {
+        if (nummat == null || nummat <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        MatriculaEntity actual = repository.findById(nummat)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Matricula no encontrado"));
+        actual.setEstmat(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public MatriculaEntity habilitar(Integer nummat) {
+        if (nummat == null || nummat <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        MatriculaEntity actual = repository.findById(nummat)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Matricula no encontrado"));
+        actual.setEstmat(true);
+        return repository.save(actual);
+    }
 }

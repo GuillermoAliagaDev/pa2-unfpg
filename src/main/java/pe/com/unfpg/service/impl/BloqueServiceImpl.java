@@ -51,4 +51,28 @@ public class BloqueServiceImpl implements BloqueService {
         actual.setEstblo(datos.getEstblo());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public BloqueEntity deshabilitar(Integer codblo) {
+        if (codblo == null || codblo <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        BloqueEntity actual = repository.findById(codblo)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Bloque no encontrado"));
+        actual.setEstblo(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public BloqueEntity habilitar(Integer codblo) {
+        if (codblo == null || codblo <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        BloqueEntity actual = repository.findById(codblo)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Bloque no encontrado"));
+        actual.setEstblo(true);
+        return repository.save(actual);
+    }
 }

@@ -46,4 +46,28 @@ public class DiaSemanaServiceImpl implements DiaSemanaService {
         existente.setEstdias(datos.getEstdias());
         return repository.save(existente);
     }
+
+    @Override
+    @Transactional
+    public DiaSemanaEntity deshabilitar(Integer coddias) {
+        if (coddias == null || coddias <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        DiaSemanaEntity actual = repository.findById(coddias)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "DiaSemana no encontrado"));
+        actual.setEstdias(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public DiaSemanaEntity habilitar(Integer coddias) {
+        if (coddias == null || coddias <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        DiaSemanaEntity actual = repository.findById(coddias)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "DiaSemana no encontrado"));
+        actual.setEstdias(true);
+        return repository.save(actual);
+    }
 }

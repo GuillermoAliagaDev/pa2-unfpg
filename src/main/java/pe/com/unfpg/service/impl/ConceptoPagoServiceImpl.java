@@ -47,4 +47,28 @@ public class ConceptoPagoServiceImpl implements ConceptoPagoService {
         existente.setDesconp(datos.getDesconp());
         return repository.save(existente);
     }
+
+    @Override
+    @Transactional
+    public ConceptoPagoEntity deshabilitar(Integer codconp) {
+        if (codconp == null || codconp <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        ConceptoPagoEntity actual = repository.findById(codconp)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "ConceptoPago no encontrado"));
+        actual.setEstconp(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public ConceptoPagoEntity habilitar(Integer codconp) {
+        if (codconp == null || codconp <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        ConceptoPagoEntity actual = repository.findById(codconp)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "ConceptoPago no encontrado"));
+        actual.setEstconp(true);
+        return repository.save(actual);
+    }
 }

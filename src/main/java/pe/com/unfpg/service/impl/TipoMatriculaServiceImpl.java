@@ -56,4 +56,28 @@ public class TipoMatriculaServiceImpl implements TipoMatriculaService {
             actual.setDestipm(datos.getDestipm().trim());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public TipoMatriculaEntity deshabilitar(Integer codtipm) {
+        if (codtipm == null || codtipm <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        TipoMatriculaEntity actual = repository.findById(codtipm)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "TipoMatricula no encontrado"));
+        actual.setEsttipm(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public TipoMatriculaEntity habilitar(Integer codtipm) {
+        if (codtipm == null || codtipm <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        TipoMatriculaEntity actual = repository.findById(codtipm)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "TipoMatricula no encontrado"));
+        actual.setEsttipm(true);
+        return repository.save(actual);
+    }
 }

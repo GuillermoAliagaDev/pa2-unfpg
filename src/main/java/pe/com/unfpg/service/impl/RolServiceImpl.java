@@ -51,4 +51,28 @@ public class RolServiceImpl implements RolService {
         existente.setEstrol(datos.getEstrol());
         return repository.save(existente);
     }
+
+    @Override
+    @Transactional
+    public RolEntity deshabilitar(Integer codrol) {
+        if (codrol == null || codrol <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        RolEntity actual = repository.findById(codrol)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Rol no encontrado"));
+        actual.setEstrol(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public RolEntity habilitar(Integer codrol) {
+        if (codrol == null || codrol <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        RolEntity actual = repository.findById(codrol)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Rol no encontrado"));
+        actual.setEstrol(true);
+        return repository.save(actual);
+    }
 }

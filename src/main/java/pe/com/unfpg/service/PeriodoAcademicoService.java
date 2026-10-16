@@ -7,4 +7,6 @@ public interface PeriodoAcademicoService {
     List<PeriodoAcademicoEntity> listar();
     PeriodoAcademicoEntity buscarPorId(Integer codper);
     PeriodoAcademicoEntity actualizar(Integer codper, PeriodoAcademicoEntity datos);
+    PeriodoAcademicoEntity deshabilitar(Integer codper);
+    PeriodoAcademicoEntity habilitar(Integer codper);
 }

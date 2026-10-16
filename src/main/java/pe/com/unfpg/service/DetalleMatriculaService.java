@@ -7,4 +7,6 @@ public interface DetalleMatriculaService {
     List<DetalleMatriculaEntity> listar();
     DetalleMatriculaEntity buscarPorId(Integer coddet);
     DetalleMatriculaEntity actualizar(Integer coddet, DetalleMatriculaEntity datos);
+    DetalleMatriculaEntity deshabilitar(Integer coddet);
+    DetalleMatriculaEntity habilitar(Integer coddet);
 }

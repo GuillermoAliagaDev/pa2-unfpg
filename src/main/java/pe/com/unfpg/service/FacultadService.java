@@ -7,4 +7,6 @@ public interface FacultadService {
     List<FacultadEntity> listar();
     FacultadEntity buscarPorId(Integer codfac);
     FacultadEntity actualizar(Integer codfac, FacultadEntity datos);
+    FacultadEntity deshabilitar(Integer codfac);
+    FacultadEntity habilitar(Integer codfac);
 }

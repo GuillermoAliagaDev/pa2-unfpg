@@ -70,4 +70,28 @@ public class LibroServiceImpl implements LibroService {
         actual.setCodedi(datos.getCodedi());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public LibroEntity deshabilitar(Integer codlib) {
+        if (codlib == null || codlib <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        LibroEntity actual = repository.findById(codlib)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Libro no encontrado"));
+        actual.setEstlib(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public LibroEntity habilitar(Integer codlib) {
+        if (codlib == null || codlib <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        LibroEntity actual = repository.findById(codlib)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Libro no encontrado"));
+        actual.setEstlib(true);
+        return repository.save(actual);
+    }
 }

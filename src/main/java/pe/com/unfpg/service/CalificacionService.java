@@ -8,4 +8,5 @@ public interface CalificacionService {
     CalificacionEntity buscarPorId(Integer codcal);
     CalificacionEntity actualizar(Integer codcal, CalificacionEntity datos);
     
+    void eliminar(Integer codcal);
 }

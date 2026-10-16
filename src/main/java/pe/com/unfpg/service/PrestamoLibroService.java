@@ -7,4 +7,6 @@ public interface PrestamoLibroService {
     List<PrestamoLibroEntity> listar();
     PrestamoLibroEntity buscarPorId(Integer numpre);
     PrestamoLibroEntity actualizar(Integer numpre, PrestamoLibroEntity datos);
+    PrestamoLibroEntity deshabilitar(Integer numpre);
+    PrestamoLibroEntity habilitar(Integer numpre);
 }

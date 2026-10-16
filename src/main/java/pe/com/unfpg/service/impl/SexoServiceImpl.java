@@ -51,4 +51,28 @@ public class SexoServiceImpl implements SexoService {
         existente.setEstsex(datos.getEstsex());
         return repository.save(existente);
     }
+
+    @Override
+    @Transactional
+    public SexoEntity deshabilitar(Integer codsex) {
+        if (codsex == null || codsex <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        SexoEntity actual = repository.findById(codsex)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Sexo no encontrado"));
+        actual.setEstsex(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public SexoEntity habilitar(Integer codsex) {
+        if (codsex == null || codsex <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        SexoEntity actual = repository.findById(codsex)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Sexo no encontrado"));
+        actual.setEstsex(true);
+        return repository.save(actual);
+    }
 }

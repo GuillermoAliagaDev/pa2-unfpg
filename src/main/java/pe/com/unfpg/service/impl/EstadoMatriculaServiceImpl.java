@@ -51,4 +51,28 @@ public class EstadoMatriculaServiceImpl implements EstadoMatriculaService {
         actual.setEstestm(datos.getEstestm());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public EstadoMatriculaEntity deshabilitar(Integer codestm) {
+        if (codestm == null || codestm <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EstadoMatriculaEntity actual = repository.findById(codestm)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EstadoMatricula no encontrado"));
+        actual.setEstestm(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public EstadoMatriculaEntity habilitar(Integer codestm) {
+        if (codestm == null || codestm <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EstadoMatriculaEntity actual = repository.findById(codestm)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EstadoMatricula no encontrado"));
+        actual.setEstestm(true);
+        return repository.save(actual);
+    }
 }

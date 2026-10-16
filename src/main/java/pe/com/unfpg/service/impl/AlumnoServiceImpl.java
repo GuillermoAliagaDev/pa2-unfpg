@@ -102,4 +102,28 @@ public class AlumnoServiceImpl implements AlumnoService {
         return repository.save(actual);
     }
 
+
+    @Override
+    @Transactional
+    public AlumnoEntity deshabilitar(Integer codalu) {
+        if (codalu == null || codalu <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        AlumnoEntity actual = repository.findById(codalu)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Alumno no encontrado"));
+        actual.setEstalu(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public AlumnoEntity habilitar(Integer codalu) {
+        if (codalu == null || codalu <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        AlumnoEntity actual = repository.findById(codalu)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Alumno no encontrado"));
+        actual.setEstalu(true);
+        return repository.save(actual);
+    }
 }

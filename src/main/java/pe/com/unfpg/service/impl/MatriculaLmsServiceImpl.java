@@ -63,4 +63,28 @@ public class MatriculaLmsServiceImpl implements MatriculaLmsService {
         actual.setCodroll(datos.getCodroll());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public MatriculaLmsEntity deshabilitar(Integer nummatl) {
+        if (nummatl == null || nummatl <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        MatriculaLmsEntity actual = repository.findById(nummatl)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "MatriculaLms no encontrado"));
+        actual.setEstmatl(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public MatriculaLmsEntity habilitar(Integer nummatl) {
+        if (nummatl == null || nummatl <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        MatriculaLmsEntity actual = repository.findById(nummatl)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "MatriculaLms no encontrado"));
+        actual.setEstmatl(true);
+        return repository.save(actual);
+    }
 }

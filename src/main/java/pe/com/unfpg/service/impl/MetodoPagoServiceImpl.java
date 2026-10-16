@@ -51,4 +51,28 @@ public class MetodoPagoServiceImpl implements MetodoPagoService {
         existente.setEstmetp(datos.getEstmetp());
         return repository.save(existente);
     }
+
+    @Override
+    @Transactional
+    public MetodoPagoEntity deshabilitar(Integer codmetp) {
+        if (codmetp == null || codmetp <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        MetodoPagoEntity actual = repository.findById(codmetp)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "MetodoPago no encontrado"));
+        actual.setEstmetp(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public MetodoPagoEntity habilitar(Integer codmetp) {
+        if (codmetp == null || codmetp <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        MetodoPagoEntity actual = repository.findById(codmetp)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "MetodoPago no encontrado"));
+        actual.setEstmetp(true);
+        return repository.save(actual);
+    }
 }

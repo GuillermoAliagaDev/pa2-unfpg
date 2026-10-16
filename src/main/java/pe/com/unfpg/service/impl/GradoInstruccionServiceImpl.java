@@ -51,4 +51,28 @@ public class GradoInstruccionServiceImpl implements GradoInstruccionService {
         existente.setEstgrai(datos.getEstgrai());
         return repository.save(existente);
     }
+
+    @Override
+    @Transactional
+    public GradoInstruccionEntity deshabilitar(Integer codgrai) {
+        if (codgrai == null || codgrai <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        GradoInstruccionEntity actual = repository.findById(codgrai)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "GradoInstruccion no encontrado"));
+        actual.setEstgrai(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public GradoInstruccionEntity habilitar(Integer codgrai) {
+        if (codgrai == null || codgrai <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        GradoInstruccionEntity actual = repository.findById(codgrai)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "GradoInstruccion no encontrado"));
+        actual.setEstgrai(true);
+        return repository.save(actual);
+    }
 }

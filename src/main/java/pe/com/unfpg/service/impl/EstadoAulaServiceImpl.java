@@ -52,4 +52,28 @@ public class EstadoAulaServiceImpl implements EstadoAulaService {
         return repository.save(actual);
     }
 
+
+    @Override
+    @Transactional
+    public EstadoAulaEntity deshabilitar(Integer codesta) {
+        if (codesta == null || codesta <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EstadoAulaEntity actual = repository.findById(codesta)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EstadoAula no encontrado"));
+        actual.setEstesta(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public EstadoAulaEntity habilitar(Integer codesta) {
+        if (codesta == null || codesta <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EstadoAulaEntity actual = repository.findById(codesta)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "EstadoAula no encontrado"));
+        actual.setEstesta(true);
+        return repository.save(actual);
+    }
 }

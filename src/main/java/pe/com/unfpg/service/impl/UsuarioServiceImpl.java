@@ -114,4 +114,28 @@ public UsuarioEntity actualizar(Integer codusu, UsuarioEntity datos) {
     return repository.save(actual);
 }
 
+
+    @Override
+    @Transactional
+    public UsuarioEntity deshabilitar(Integer codusu) {
+        if (codusu == null || codusu <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        UsuarioEntity actual = repository.findById(codusu)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado"));
+        actual.setEstusu(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public UsuarioEntity habilitar(Integer codusu) {
+        if (codusu == null || codusu <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        UsuarioEntity actual = repository.findById(codusu)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Usuario no encontrado"));
+        actual.setEstusu(true);
+        return repository.save(actual);
+    }
 }

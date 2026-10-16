@@ -64,4 +64,15 @@ public class SeccionServiceImpl implements SeccionService {
         actual.setCodper(datos.getCodper());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public void eliminar(Integer codsec) {
+        if (codsec == null || codsec <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        SeccionEntity actual = repository.findById(codsec)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Seccion no encontrado"));
+        repository.delete(actual);
+    }
 }

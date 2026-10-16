@@ -7,4 +7,6 @@ public interface EstadoAulaService {
     List<EstadoAulaEntity> listar();
     EstadoAulaEntity buscarPorId(Integer codesta);
     EstadoAulaEntity actualizar(Integer codesta, EstadoAulaEntity datos);
+    EstadoAulaEntity deshabilitar(Integer codesta);
+    EstadoAulaEntity habilitar(Integer codesta);
 }

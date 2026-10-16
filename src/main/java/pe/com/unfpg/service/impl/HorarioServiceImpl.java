@@ -66,4 +66,15 @@ public class HorarioServiceImpl implements HorarioService {
         actual.setCodaul(datos.getCodaul());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public void eliminar(Integer codhor) {
+        if (codhor == null || codhor <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        HorarioEntity actual = repository.findById(codhor)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Horario no encontrado"));
+        repository.delete(actual);
+    }
 }

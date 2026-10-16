@@ -7,4 +7,6 @@ public interface MatriculaService {
     List<MatriculaEntity> listar();
     MatriculaEntity buscarPorId(Integer nummat);
     MatriculaEntity actualizar(Integer nummat, MatriculaEntity datos);
+    MatriculaEntity deshabilitar(Integer nummat);
+    MatriculaEntity habilitar(Integer nummat);
 }

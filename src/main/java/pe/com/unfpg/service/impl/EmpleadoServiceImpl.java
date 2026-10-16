@@ -116,4 +116,28 @@ public class EmpleadoServiceImpl implements EmpleadoService {
         return repository.save(actual);
     }
 
+
+    @Override
+    @Transactional
+    public EmpleadoEntity deshabilitar(Integer codemp) {
+        if (codemp == null || codemp <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EmpleadoEntity actual = repository.findById(codemp)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Empleado no encontrado"));
+        actual.setEstemp(false);
+        return repository.save(actual);
+    }
+
+    @Override
+    @Transactional
+    public EmpleadoEntity habilitar(Integer codemp) {
+        if (codemp == null || codemp <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        EmpleadoEntity actual = repository.findById(codemp)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Empleado no encontrado"));
+        actual.setEstemp(true);
+        return repository.save(actual);
+    }
 }

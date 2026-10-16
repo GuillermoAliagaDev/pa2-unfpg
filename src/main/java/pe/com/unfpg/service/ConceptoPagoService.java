@@ -7,4 +7,6 @@ public interface ConceptoPagoService {
     List<ConceptoPagoEntity> listar();
     ConceptoPagoEntity buscarPorId(Integer codconp);
     ConceptoPagoEntity actualizar(Integer codconp, ConceptoPagoEntity datos);
+    ConceptoPagoEntity deshabilitar(Integer codconp);
+    ConceptoPagoEntity habilitar(Integer codconp);
 }

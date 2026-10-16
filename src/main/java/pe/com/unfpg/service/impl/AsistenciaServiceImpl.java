@@ -62,4 +62,15 @@ public class AsistenciaServiceImpl implements AsistenciaService {
         actual.setCodsec(datos.getCodsec());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public void eliminar(Integer codasis) {
+        if (codasis == null || codasis <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        AsistenciaEntity actual = repository.findById(codasis)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Asistencia no encontrado"));
+        repository.delete(actual);
+    }
 }

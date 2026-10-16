@@ -68,4 +68,15 @@ public class AulaServiceImpl implements AulaService {
         actual.setCodesta(datos.getCodesta());
         return repository.save(actual);
     }
+
+    @Override
+    @Transactional
+    public void eliminar(Integer codaul) {
+        if (codaul == null || codaul <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "ID invalido");
+        }
+        AulaEntity actual = repository.findById(codaul)
+            .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Aula no encontrado"));
+        repository.delete(actual);
+    }
 }
