@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.EstadoPrestamoLibroEntity;
 public interface EstadoPrestamoLibroService {
     List<EstadoPrestamoLibroEntity> listar();
     EstadoPrestamoLibroEntity buscarPorId(Integer codestl);
+    EstadoPrestamoLibroEntity actualizar(Integer codestl, EstadoPrestamoLibroEntity datos);
 }

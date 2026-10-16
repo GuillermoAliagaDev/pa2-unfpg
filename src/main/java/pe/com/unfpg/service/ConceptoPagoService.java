@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.ConceptoPagoEntity;
 public interface ConceptoPagoService {
     List<ConceptoPagoEntity> listar();
     ConceptoPagoEntity buscarPorId(Integer codconp);
+    ConceptoPagoEntity actualizar(Integer codconp, ConceptoPagoEntity datos);
 }

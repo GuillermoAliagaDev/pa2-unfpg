@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.RolEntity;
 public interface RolService {
     List<RolEntity> listar();
     RolEntity buscarPorId(Integer codrol);
+    RolEntity actualizar(Integer codrol, RolEntity datos);
 }

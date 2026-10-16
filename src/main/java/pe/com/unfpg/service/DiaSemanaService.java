@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.DiaSemanaEntity;
 public interface DiaSemanaService {
     List<DiaSemanaEntity> listar();
     DiaSemanaEntity buscarPorId(Integer coddias);
+    DiaSemanaEntity actualizar(Integer coddias, DiaSemanaEntity datos);
 }

@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.EstadoMatriculaEntity;
 public interface EstadoMatriculaService {
     List<EstadoMatriculaEntity> listar();
     EstadoMatriculaEntity buscarPorId(Integer codestm);
+    EstadoMatriculaEntity actualizar(Integer codestm, EstadoMatriculaEntity datos);
 }

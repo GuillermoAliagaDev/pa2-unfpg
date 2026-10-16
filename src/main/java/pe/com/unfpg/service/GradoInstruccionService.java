@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.GradoInstruccionEntity;
 public interface GradoInstruccionService {
     List<GradoInstruccionEntity> listar();
     GradoInstruccionEntity buscarPorId(Integer codgrai);
+    GradoInstruccionEntity actualizar(Integer codgrai, GradoInstruccionEntity datos);
 }

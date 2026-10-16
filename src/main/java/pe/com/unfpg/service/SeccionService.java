@@ -6,4 +6,6 @@ import pe.com.unfpg.entity.SeccionEntity;
 public interface SeccionService {
     List<SeccionEntity> listar();
     SeccionEntity buscarPorId(Integer codsec);
+    SeccionEntity actualizar(Integer codsec, SeccionEntity datos);
+
 }

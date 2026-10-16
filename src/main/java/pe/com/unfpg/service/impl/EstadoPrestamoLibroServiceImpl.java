@@ -2,8 +2,11 @@ package pe.com.unfpg.service.impl;
 
 import java.util.List;
 import org.springframework.data.domain.Sort;
+import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
+import org.springframework.web.server.ResponseStatusException;
+
 import pe.com.unfpg.entity.EstadoPrestamoLibroEntity;
 import pe.com.unfpg.repository.EstadoPrestamoLibroRepository;
 import pe.com.unfpg.service.EstadoPrestamoLibroService;
@@ -28,5 +31,24 @@ public class EstadoPrestamoLibroServiceImpl implements EstadoPrestamoLibroServic
         if (codestl == null || codestl <= 0) throw ConsultaGetException.idInvalido("codestl");
         return repository.findById(codestl)
             .orElseThrow(() -> ConsultaGetException.noEncontrado("estadoprestamolibro"));
+    }
+    
+    @Override
+    @Transactional
+    public EstadoPrestamoLibroEntity actualizar(Integer codestl, EstadoPrestamoLibroEntity datos) {
+        if (codestl == null || codestl <= 0) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Identificador invalido");
+        }
+        if (datos == null || datos.getNomestl() == null
+                || datos.getNomestl().trim().isEmpty()
+                || datos.getNomestl().trim().length() > 50
+                || datos.getEstestl() == null) {
+            throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Datos invalidos");
+        }
+        EstadoPrestamoLibroEntity actual = repository.findById(codestl)
+                .orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND, "Registro no encontrado"));
+        actual.setNomestl(datos.getNomestl().trim());
+        actual.setEstestl(datos.getEstestl());
+        return repository.save(actual);
     }
 }

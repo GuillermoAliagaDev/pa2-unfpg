@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.BloqueEntity;
 public interface BloqueService {
     List<BloqueEntity> listar();
     BloqueEntity buscarPorId(Integer codblo);
+    BloqueEntity actualizar(Integer codblo, BloqueEntity datos);
 }

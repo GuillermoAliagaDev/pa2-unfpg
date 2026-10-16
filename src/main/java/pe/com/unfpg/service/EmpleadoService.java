@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.EmpleadoEntity;
 public interface EmpleadoService {
     List<EmpleadoEntity> listar();
     EmpleadoEntity buscarPorId(Integer codemp);
+    EmpleadoEntity actualizar(Integer codemp, EmpleadoEntity datos);
 }

@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.DetalleMatriculaEntity;
 public interface DetalleMatriculaService {
     List<DetalleMatriculaEntity> listar();
     DetalleMatriculaEntity buscarPorId(Integer coddet);
+    DetalleMatriculaEntity actualizar(Integer coddet, DetalleMatriculaEntity datos);
 }

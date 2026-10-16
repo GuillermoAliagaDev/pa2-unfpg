@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.UsuarioEntity;
 public interface UsuarioService {
     List<UsuarioEntity> listar();
     UsuarioEntity buscarPorId(Integer codusu);
+    UsuarioEntity actualizar(Integer codusu, UsuarioEntity datos);
 }

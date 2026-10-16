@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.AsistenciaEntity;
 public interface AsistenciaService {
     List<AsistenciaEntity> listar();
     AsistenciaEntity buscarPorId(Integer codasis);
+    AsistenciaEntity actualizar(Integer codasis, AsistenciaEntity datos);
 }

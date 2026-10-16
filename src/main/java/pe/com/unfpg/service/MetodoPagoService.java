@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.MetodoPagoEntity;
 public interface MetodoPagoService {
     List<MetodoPagoEntity> listar();
     MetodoPagoEntity buscarPorId(Integer codmetp);
+    MetodoPagoEntity actualizar(Integer codmetp, MetodoPagoEntity datos);
 }

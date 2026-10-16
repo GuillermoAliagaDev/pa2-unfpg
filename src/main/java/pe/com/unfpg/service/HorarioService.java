@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.HorarioEntity;
 public interface HorarioService {
     List<HorarioEntity> listar();
     HorarioEntity buscarPorId(Integer codhor);
+    HorarioEntity actualizar(Integer codhor, HorarioEntity datos);
 }

@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.AlumnoEntity;
 public interface AlumnoService {
     List<AlumnoEntity> listar();
     AlumnoEntity buscarPorId(Integer codalu);
+    AlumnoEntity actualizar(Integer codalu, AlumnoEntity datos);
 }

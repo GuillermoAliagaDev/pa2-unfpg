@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.PagoEntity;
 public interface PagoService {
     List<PagoEntity> listar();
     PagoEntity buscarPorId(Integer codpag);
+    PagoEntity actualizar(Integer codpag, PagoEntity datos);
 }

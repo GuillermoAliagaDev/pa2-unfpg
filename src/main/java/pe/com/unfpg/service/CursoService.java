@@ -6,4 +6,6 @@ import pe.com.unfpg.entity.CursoEntity;
 public interface CursoService {
     List<CursoEntity> listar();
     CursoEntity buscarPorId(Integer codcur);
+    CursoEntity actualizar(Integer codcur, CursoEntity datos);
+
 }

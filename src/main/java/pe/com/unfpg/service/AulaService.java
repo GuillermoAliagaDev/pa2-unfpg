@@ -6,4 +6,5 @@ import pe.com.unfpg.entity.AulaEntity;
 public interface AulaService {
     List<AulaEntity> listar();
     AulaEntity buscarPorId(Integer codaul);
+    AulaEntity actualizar(Integer codaul, AulaEntity datos);
 }
